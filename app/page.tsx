@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Library Section */}
+      {/* library Section */}
       <div id="library" className="space-y-8">
         <div className="flex justify-between items-end">
           <div>
@@ -92,7 +92,7 @@ export default function Home() {
                       <div className="flex items-center gap-1"><Flame size={16} className="text-[#ccff00]"/> {workout.caloriesBurned} kcal</div>
                       <div className="flex items-center gap-1"><Star size={16} className="text-[#ccff00]"/> {workout.rating}</div>
                     </div>
-                  </div>
+                  </div>                  
                 </div>
               </Link>
             ))}
