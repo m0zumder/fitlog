@@ -11,9 +11,9 @@ type WorkoutContextType ={
     marketAsDone: (id: number) => void;
 };
 
-cosnt WorkoutContext = createContext <workoutContextType | undefined>(undefined);
+const WorkoutContext = createContext<WorkoutContextType | undefined>(undefined);
 
-export const WorkoutProvider = ({children}:{children:React.ReactNode}) => {
+export const WorkoutProvider = ({children}:{children: React.ReactNode}) => {
     const [planned, setPlanned] = useState<any[]>([]);
     const [saved, setSaved] = useState<any[]>([]);
 
@@ -57,7 +57,7 @@ const removeFromPlan = (id: number, type: 'plan' | 'saved') => {
     toast.error("Workout removed");
 };
 
-const marketAsDone = (id: number) => {
+const markAsDone = (id: number) => {
     setPlanned(planned.filter((w) => w.id !== id));
     toast.success("Workout marked as done! Great job!");
 };
