@@ -38,10 +38,16 @@ export default function MyPlan() {
 
       {/* Tabs */}
       <div className="flex border-b border-gray-800 mb-6">
-        <button onClick={() => setActiveTab('plan')} className={`pb-4 px-6 font-bold ${activeTab === 'plan' ? 'text-[#ccff00] border-b-2 border-[#ccff00]' : 'text-gray-500 hover:text-white'}`}>
+        <button 
+          onClick={() => setActiveTab('plan')} 
+          className={`pb-4 px-6 font-bold ${activeTab === 'plan' ? 'text-[#ccff00] border-b-2 border-[#ccff00]' : 'text-gray-500 hover:text-white'}`}
+        >
           Today's Plan
         </button>
-        <button onClick={() => setActiveTab('saved')} className={`pb-4 px-6 font-bold ${activeTab === 'saved' ? 'text-[#ccff00] border-b-2 border-[#ccff00]' : 'text-gray-500 hover:text-white'}`}>
+        <button 
+          onClick={() => setActiveTab('saved')} 
+          className={`pb-4 px-6 font-bold ${activeTab === 'saved' ? 'text-[#ccff00] border-b-2 border-[#ccff00]' : 'text-gray-500 hover:text-white'}`}
+        >
           Saved
         </button>
       </div>
@@ -68,6 +74,7 @@ export default function MyPlan() {
                 <Link href={`/workout/${workout.id}`} className="p-2 bg-gray-800 rounded-md hover:bg-gray-700 text-white" title="View Details">
                   <Eye size={18} />
                 </Link>
+                {/* Mark as Done is only visible in Today's Plan tab */}
                 {activeTab === 'plan' && (
                   <button onClick={() => markAsDone(workout.id)} className="p-2 bg-[#ccff00] text-black rounded-md hover:bg-yellow-400" title="Mark as Done">
                     <Check size={18} />
