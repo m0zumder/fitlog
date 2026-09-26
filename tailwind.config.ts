@@ -11,10 +11,10 @@ const config: Config = {
       colors: {
         background: "#0a0a0a",
         foreground: "#ffffff",
-        accent: "#ccff00", // Accent color provided in your instructions
+        accent: "#ccff00",
       },
       fontFamily: {
-        oswald: ["Oswald", "sans-serif"], // Custom font
+        oswald: ["Oswald", "sans-serif"],
       },
     },
   },
